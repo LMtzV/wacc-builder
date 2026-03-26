@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wacc-builder"
+version = "0.1.0"
+description = "WACC calculation tool from first principles using CAPM + CRP"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = ["requests>=2.25.0", "matplotlib>=3.3.0", "tabulate>=0.8.0", "numpy>=1.19.0"]
+
+[project.scripts]
+wacc-build = "wacc_builder.cli:main"
+wacc-compare-countries = "wacc_builder.cli:main"
+wacc-compare-sectors = "wacc_builder.cli:main"
+
+[tool.setuptools]
+packages = ["wacc_builder"]
